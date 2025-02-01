@@ -1,5 +1,5 @@
 /* General Reset */
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -31,6 +31,75 @@ body {
   
 }
 
+/* nav section*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+}
+.button1 a {
+  color: black; /*thhis is the text colour of the button in nav*/
+  font-size: 16px;
+}
+.button1:hover {background-color: #e7e7e7;}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+ul li {
+  display: inline;
+}
+
+ul li a:hover {
+  background: rgb(218, 217, 223); /*its showes inside of the nav button colour blue on hover */
+}
+ .menu-icon {            /*  its showes three line  when we in inspact code in nav */
+  
+  background-color: white;
+  width: 30px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #333;
+      width: 100%;
+      text-align: center;
+  }
+  ul.show {
+      display: flex;
+  }
+  .menu-icon {
+      display: block;
+  }
+}
 a {
   text-decoration: none;
   color: var(--blue);
@@ -88,7 +157,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: rgb(194, 138, 138);
-  background-image: url('./assets/Computer-screen-code-glitch-animation-gif-background-free.gif'); /* Update with the relative path to your GIF */
+  background-image: url('./Computer-screen-code-glitch-animation-gif-background-free.gif'); /* Update with the relative path to your GIF */
   background-size: cover; /* Ensure the GIF covers the entire nav */
   background-repeat: no-repeat; 
   position: relative;
@@ -225,7 +294,7 @@ nav ul li a {
     opacity: 1; /* Fully visible */
   }
 }
-
+/* hero section css */
 .hero-blue {
   flex: 1;
   background-color: var(--blue-800);
@@ -607,7 +676,7 @@ nav ul li a {
   }
 }
 
-/* Contact section */
+/* Contact section  */
 
 .contact {
   max-width: 1440px;
@@ -660,28 +729,8 @@ nav ul li a {
   font-weight: 400;
 }
 
-/* Footer section */
 
-.footer {
-  width: 100%;
-  height: 150px;
-  background-color: #edeade;
-  padding: 10px 30px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.social-links {
-  display: flex;
-  gap: 10px;
-}
-
+/* This is all about from css */
 .button {
   background-color: #04AA6D; /* Green */
   border: none;
@@ -695,14 +744,6 @@ nav ul li a {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.button4 {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
-}
-
-.button1:hover {background-color: #e7e7e7;}
-
 
 .button5 {
   padding: 10px 20px;
@@ -761,4 +802,25 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+/* Footer section */
+
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: #edeade;
+  padding: 10px 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
 }
