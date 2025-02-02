@@ -1,24 +1,24 @@
 /* General Reset */
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --base: #555;
-  --base-100: #f1f1f1;
-  --base-400: #555;
-  --base-800: #000;
-  --yellow: #ffda4b;
-  --yellow-100: #fffbe6;
-  --yellow-400: #ffda4b;
-  --yellow-800: #8b6f00;
-  --blue: #0a61ae;
-  --blue-100: #e2f8ff;
-  --blue-400: #61dafb;
-  --blue-800: #0a61ae;
-  --red--600: #ae0a3b;
+   --base: #555;   /*dark gray */
+  --base-100: #f1f1f1;   /* light gray */
+  --base-400: #555;   /*dark gray */
+   --base-800: #000;   /*black */
+   --yellow: #ffda4b;    /*yello */
+  --yellow-100: #fffbe6;   /* pale yello */
+  --yellow-400: #ffda4b;  /*  bright yello */
+  --yellow-800: #8b6f00;  /*  dark yello */
+  --blue: #0a61ae;  /* deep blue */
+  --blue-100: #e2f8ff;    /* sky blue*/
+  --blue-400: #61dafb;    /* light blue*/
+  --blue-800: #0a61ae;    /* deep blue*/
+  --red--600: #ae0a3b;   /*  dark red*/
 }
 
 body {
@@ -31,75 +31,6 @@ body {
   
 }
 
-/* nav section*/
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 15px 20px;
-}
-.button1 a {
-  color: black; /*thhis is the text colour of the button in nav*/
-  font-size: 16px;
-}
-.button1:hover {background-color: #e7e7e7;}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo i {
-  font-size: 24px;
-  margin-right: 10px;
-}
-ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-}
-ul li {
-  display: inline;
-}
-
-ul li a:hover {
-  background: rgb(218, 217, 223); /*its showes inside of the nav button colour blue on hover */
-}
- .menu-icon {            /*  its showes three line  when we in inspact code in nav */
-  
-  background-color: white;
-  width: 30px;
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-.button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background: #333;
-      width: 100%;
-      text-align: center;
-  }
-  ul.show {
-      display: flex;
-  }
-  .menu-icon {
-      display: block;
-  }
-}
 a {
   text-decoration: none;
   color: var(--blue);
@@ -211,11 +142,11 @@ nav ul li a {
 }
 
 .menu-icon {
-  display: none;
+  display: none;  /*if i remove this than three line will show */
 }
 
 .menu-icon i {
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
@@ -255,6 +186,22 @@ nav ul li a {
   }
 }
 
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1:hover {background-color: #e7e7e7;}
+
 /* Hero Section */
 
 .hero {
@@ -275,7 +222,7 @@ nav ul li a {
 
 @media (max-width: 1024px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .slide-in-text {
@@ -294,7 +241,7 @@ nav ul li a {
     opacity: 1; /* Fully visible */
   }
 }
-/* hero section css */
+
 .hero-blue {
   flex: 1;
   background-color: var(--blue-800);
@@ -387,7 +334,7 @@ nav ul li a {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 40s linear infinite;
+  animation: marquee 20s linear infinite;
   display: flex;
   gap: 10px;
 }
@@ -676,7 +623,7 @@ nav ul li a {
   }
 }
 
-/* Contact section  */
+/* Contact section */
 
 .contact {
   max-width: 1440px;
@@ -730,21 +677,8 @@ nav ul li a {
 }
 
 
-/* This is all about from css */
-.button {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
+/* from section */
 .button5 {
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -803,6 +737,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
+
 /* Footer section */
 
 .footer {
