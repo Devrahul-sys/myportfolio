@@ -1,6 +1,7 @@
 let menuList = document.getElementById("menuList");
 menuList.style.maxHeight = "0px";
 
+
 function toggleMenu() {
   if (menuList.style.maxHeight == "0px") {
     menuList.style.maxHeight = "300px";
@@ -13,10 +14,17 @@ function toggleMenu() {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
+    
     const target = document.querySelector(this.getAttribute("href"));
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      console.warn("Target element not found:", this.getAttribute("href"));
+    }
   });
 });
+
 document.getElementById('showFormBtn').addEventListener('click', function() {
   var formContainer = document.getElementById('formContainer');
   formContainer.classList.toggle('show');
